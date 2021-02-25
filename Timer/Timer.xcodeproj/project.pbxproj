@@ -15,7 +15,6 @@
 		A25AC6A425C0237500E06D52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A25AC6A325C0237500E06D52 /* main.m */; };
 		A25AC6AE25C0237600E06D52 /* TimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A25AC6AD25C0237600E06D52 /* TimerTests.m */; };
 		A25AC6B925C0237600E06D52 /* TimerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A25AC6B825C0237600E06D52 /* TimerUITests.m */; };
-		A25AC6D325C0241000E06D52 /* mark.md in Resources */ = {isa = PBXBuildFile; fileRef = A25AC6D225C0241000E06D52 /* mark.md */; };
 		A25AC77225C15C4E00E06D52 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A25AC77025C15C4E00E06D52 /* GCDTimer.m */; };
 		A25AC77825C15C6600E06D52 /* TimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A25AC77725C15C6600E06D52 /* TimerManager.m */; };
 		A25AC77E25C15C8C00E06D52 /* TimerOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = A25AC77D25C15C8C00E06D52 /* TimerOptions.m */; };
@@ -56,7 +55,6 @@
 		A25AC6B425C0237600E06D52 /* TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25AC6B825C0237600E06D52 /* TimerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerUITests.m; sourceTree = "<group>"; };
 		A25AC6BA25C0237600E06D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A25AC6D225C0241000E06D52 /* mark.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = mark.md; sourceTree = "<group>"; };
 		A25AC77025C15C4E00E06D52 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
 		A25AC77125C15C4E00E06D52 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
 		A25AC77625C15C6600E06D52 /* TimerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerManager.h; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				A25AC69225C0237300E06D52 /* AppDelegate.m */,
 				A25AC69725C0237300E06D52 /* ViewController.h */,
 				A25AC69825C0237300E06D52 /* ViewController.m */,
-				A25AC6D225C0241000E06D52 /* mark.md */,
 				A25AC69A25C0237300E06D52 /* Main.storyboard */,
 				A25AC69D25C0237500E06D52 /* Assets.xcassets */,
 				A25AC69F25C0237500E06D52 /* LaunchScreen.storyboard */,
@@ -270,7 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A25AC6A125C0237500E06D52 /* LaunchScreen.storyboard in Resources */,
-				A25AC6D325C0241000E06D52 /* mark.md in Resources */,
 				A25AC69E25C0237500E06D52 /* Assets.xcassets in Resources */,
 				A25AC69C25C0237300E06D52 /* Main.storyboard in Resources */,
 			);
