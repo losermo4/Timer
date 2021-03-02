@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "GCDTimer.h"
 #import "Timer.h"
+#include <sys/time.h>
 
 static NSString *key = @"key";
 
@@ -34,10 +35,13 @@ static NSString *key = @"key";
     _label.textColor = [UIColor darkTextColor];
     [self.view addSubview:_label];
     _label.text = keys;
-        
 
     self.helper = [[TimerHelper alloc] initWithTimerType:TimerTypeSecondCommon interval:5];
     [self.helper addCallBack:self];
+    
+    struct timeval val;
+    gettimeofday(&val, NULL);
+    
     
 }
 
