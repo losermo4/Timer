@@ -71,19 +71,12 @@ CFAbsoluteTime absoluteTime = CFAbsoluteTimeGetCurrent();
 #include <sys/sysctl.h>
 
 int mib_size = 2;
-
 int mib[mib_size];
-
 size_t size;
-
 struct timeval val;
-
 mib[0] = CTL_KERN;
-
 mib[1] = KERN_BOOTTIME;
-
 size = sizeof(val);
-
 sysctl(mib, mib_size, &val, &size, NULL, 0);
     
 
