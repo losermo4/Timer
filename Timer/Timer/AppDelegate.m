@@ -7,7 +7,6 @@
 
 #import "AppDelegate.h"
 
-static NSString *key = @"key";
 
 @interface AppDelegate ()
 
@@ -18,23 +17,9 @@ static NSString *key = @"key";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
-    NSMutableDictionary *cacheInfo = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-    NSLog(@"cacheInfo %@", cacheInfo);
     return YES;
 }
 
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    NSMutableDictionary *cacheInfo = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-    if (!cacheInfo) {
-        cacheInfo = [NSMutableDictionary dictionary];
-    }
-    CFAbsoluteTime time = CFAbsoluteTimeGetCurrent();
-    [cacheInfo setObject:@"applicationWillTerminate" forKey:@(time)];
-    [[NSUserDefaults standardUserDefaults] setObject:cacheInfo forKey:key];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
 
 
 @end

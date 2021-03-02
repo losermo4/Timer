@@ -6,11 +6,8 @@
 //
 
 #import "ViewController.h"
-#import "GCDTimer.h"
-#import "Timer.h"
-#include <sys/time.h>
 
-static NSString *key = @"key";
+#import "Timer.h"
 
 
 @interface ViewController ()<TimerCallBack>
@@ -29,18 +26,10 @@ static NSString *key = @"key";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSMutableDictionary *cacheInfo = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-    NSString *keys = [cacheInfo.allKeys componentsJoinedByString:@"&"];
-    _label = [UILabel new];
-    _label.textColor = [UIColor darkTextColor];
-    [self.view addSubview:_label];
-    _label.text = keys;
 
-    self.helper = [[TimerHelper alloc] initWithTimerType:TimerTypeSecondCommon interval:5];
+    self.helper = [[TimerHelper alloc] initWithTimerType:TimerTypeSecondCommon interval:50000];
     [self.helper addCallBack:self];
-    
-    struct timeval val;
-    gettimeofday(&val, NULL);
+    [self helperCallBack:self.helper];
     
     
 }

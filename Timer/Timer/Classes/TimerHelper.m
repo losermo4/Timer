@@ -85,7 +85,7 @@ static double currentDate(void) {
         _hour = (time - _day * 24 * 3600) / 3600;
         _minute = (time - _day*24*3600- _hour*3600)/60;
         _second = time-_day*24*3600-_hour*3600-_minute*60;
-        _msec = (residue - time) * 10;
+//        _msec = (residue - time) * 10;
     }else if ((self.timerType & TimerTypeHelperMaskCommon) && (self.timerType & TimerTypeFrequencyTenthOfSecond)) {
         if (self.commonTypeStatus == TimerHelperCommonTypeStatusFinish) return NO;
         if (self.interval <= 0 || self.interval*10 <= self.runningInterval) {
