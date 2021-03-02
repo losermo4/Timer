@@ -53,8 +53,6 @@ CFAbsoluteTime absoluteTime = CFAbsoluteTimeGetCurrent();
 
  使用：
  
- 需要引入系统头文件
-    
  #include <sys/time.h>
  
  struct timeval val;
@@ -66,20 +64,24 @@ CFAbsoluteTime absoluteTime = CFAbsoluteTimeGetCurrent();
 
 使用：
 
-需要引入系统头文件
-    
 #include <sys/sysctl.h>
 
 int mib_size = 2;
+
 int mib[mib_size];
+
 size_t size;
+
 struct timeval val;
+
 mib[0] = CTL_KERN;
+
 mib[1] = KERN_BOOTTIME;
+
 size = sizeof(val);
+
 sysctl(mib, mib_size, &val, &size, NULL, 0);
     
-
 
 ## 2.受设备重启影响的方式; 用户修改设备时间这些获取时间方式返回的值不会发生变化，但是设备重启和休眠会影响
 
@@ -87,8 +89,6 @@ sysctl(mib, mib_size, &val, &size, NULL, 0);
 
 使用：
 
-需要引入系统头文件
-    
 #include <mach/mach_time.h>
 
 UInt64 time = mach_absolute_time();
