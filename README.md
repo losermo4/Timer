@@ -36,16 +36,16 @@
 1.1 NSDate, Foundation框架下的获取时间    
 
 使用：
-、、、
+    
 NSDate *date = [NSDate date];
-、、、
+    
 
 ### 1.2 CFAbsoluteTimeGetCurrent()，Core Foundation框架下的获取时间
 
 使用：
-、、、
+    
 CFAbsoluteTime absoluteTime = CFAbsoluteTimeGetCurrent();
-、、、
+    
 相当于[NSDate date] timeIntervalSinceReferenceDate]
 
 
@@ -54,20 +54,20 @@ CFAbsoluteTime absoluteTime = CFAbsoluteTimeGetCurrent();
  使用：
  
  需要引入系统头文件
- 、、、
+    
  #include <sys/time.h>
  
  struct timeval val;
  
  gettimeofday(&val, NULL);
- 、、、
+    
  
 ### 1.4 sysctl,获取Linux内核返回的设备重启之后运行的时间
 
 使用：
 
 需要引入系统头文件
-、、、
+    
 #include <sys/sysctl.h>
 
 int mib_size = 2;
@@ -85,7 +85,7 @@ mib[1] = KERN_BOOTTIME;
 size = sizeof(val);
 
 sysctl(mib, mib_size, &val, &size, NULL, 0);
-、、、
+    
 
 
 ## 2.受设备重启影响的方式; 用户修改设备时间这些获取时间方式返回的值不会发生变化，但是设备重启和休眠会影响
@@ -95,23 +95,23 @@ sysctl(mib, mib_size, &val, &size, NULL, 0);
 使用：
 
 需要引入系统头文件
-、、、
+    
 #include <mach/mach_time.h>
 
 UInt64 time = mach_absolute_time();
-、、、
+    
 
 ### 1.2 CACurrentMediaTime()， QuartzCore框架下获取时间
 
 使用：
-、、、
+    
 CFTimeInterval time = CACurrentMediaTime();
-、、、
+    
 
 ## 3. 获取系统累计开机时间
-
+    
 [NSProcessInfo processInfo].systemUptime 
-
+    
 经过测试，回到后台，改变手机时间，息屏状态下都不会受到影响
 
 
