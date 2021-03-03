@@ -143,3 +143,38 @@ CFTimeInterval time = CACurrentMediaTime();
 
 5.TimerCallBack: 倒计时回调
 
+# 七、基本使用
+
+#import "ViewController.h"
+
+#import "Timer.h"
+
+
+@interface ViewController ()<TimerCallBack>
+
+@property (nonatomic, strong) TimerHelper *helper;
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+
+    [super viewDidLoad];
+    
+    self.helper = [[TimerHelper alloc] initWithTimerType:TimerTypeSecondCommon interval:50000];
+    
+    [self.helper addCallBack:self];
+    
+    [self helperCallBack:self.helper];
+    
+}
+
+- (void)helperCallBack:(id<TimerHelper>)helper {
+
+    NSLog(@"helper %ld天:%02ld:%02ld:%02ld:%02ld", helper.day, (long)helper.hour, helper.minute, helper.second, helper.msec);
+    
+}
+
+@end
+
